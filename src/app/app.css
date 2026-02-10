@@ -1,0 +1,14 @@
+*{
+    font-family:Helvetica;
+}
+
+.hero-tag{
+    font-size:8rem;
+}
+
+.main-contain{
+    height:100%;
+
+    border-radius:16px;
+    padding:16px;
+}

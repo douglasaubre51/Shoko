@@ -1,0 +1,30 @@
+<h3><font style='color:lavender'>Lavender</font> for Developers</h3>
+<h3><font style='color:lightgreen'>Green</font> for Normal Users</h3>
+
+<div class='card-contain'>
+@for(user of userList;track user.id){
+    @if(user.isDeveloper == true){
+        <div class='card' style='background-color:lavender'>
+            <img class='card-img' src='{{ user.profilePhotoURL }}' />
+
+            <div class='card-details-contain'>
+            <span class='card-title'>{{ user.firstName }} {{ user.lastName }}</span>
+            <span class='card-subtitle'>id: {{ user.id }} </span>
+            </div>
+            </div>
+    }
+
+    @else{
+        <div class='card' style='background-color:lightgreen'>
+            <img class='card-img' src='{{ user.profilePhotoURL }}' />
+
+            <div class='card-details-contain'>
+            <span class='card-title'>{{ user.firstName }} {{ user.lastName }}</span>
+            <span class='card-subtitle'>id: {{ user.id }} </span>
+            </div>
+            </div>
+    }
+} @empty{
+    <span>Oops empty!</span>
+}
+</div>
