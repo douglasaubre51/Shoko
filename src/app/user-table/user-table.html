@@ -1,9 +1,8 @@
-<h3>
-    <font style='color:rebeccapurple'>Rebeccapurple</font> for Developers
-</h3>
-<h3>
-    <font style='color:lightgreen'>Green</font> for Normal Users
-</h3>
+<div class="bullet" style="background-color: green;"></div>
+<h3>Normal Users</h3><br /><br />
+<div class="bullet" style="background-color: rebeccapurple"></div>
+<h3>Developers</h3>
+<br /><br />
 
 <div class='card-contain'>
     @if(userList | async; as users){
@@ -14,6 +13,7 @@
 
         <div class='card-details-contain'>
             <span class='card-title'>{{ user.firstName }} {{ user.lastName }}</span>
+            <span class='card-subtitle'>{{ user.email }} </span>
             <span class='card-subtitle'>id: {{ user.id }} </span>
         </div>
     </div>
@@ -25,6 +25,7 @@
 
         <div class='card-details-contain'>
             <span class='card-title'>{{ user.firstName }} {{ user.lastName }}</span>
+            <span class='card-subtitle'>{{ user.email }} </span>
             <span class='card-subtitle'>id: {{ user.id }} </span>
         </div>
     </div>

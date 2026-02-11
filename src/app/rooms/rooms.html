@@ -1,1 +1,29 @@
-<p>rooms works!</p>
+<div class="bullet" style="background-color: coral;"></div>
+<h3>Private Rooms</h3><br /><br />
+<div class="bullet" style="background-color: lightblue"></div>
+<h3>Dev Rooms</h3>
+<br /><br />
+
+<div class="card-contain">
+    @if(roomList | async; as rooms){
+    @for(room of rooms;track room.roomId){
+    <div class="card" [style.background-color]="room.roomType === 0 ? 'coral' : 'lightblue'">
+        <span class="card-display">{{room.roomId}}</span>
+
+        <div class="card-details">
+            <div class="user-card" style="background-color: lightgreen;">
+                <img class="card-img" [src]="room.ownerProfileURL" />
+                <span class="card-title">{{room.ownerName}}</span>
+                <span class="card-title">{{room.ownerId}}</span>
+            </div>
+
+            <div class="user-card" style="background-color: lavender;">
+                <img class="card-img" [src]="room.tenantProfileURL" />
+                <span class="card-title">{{room.tenantName}}</span>
+                <span class="card-title">{{room.ownerId}}</span>
+            </div>
+        </div>
+    </div>
+    }
+    }
+</div>
