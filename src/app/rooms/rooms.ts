@@ -8,20 +8,15 @@ import { HttpClient } from '@angular/common/http';
   styleUrl: './rooms.css',
 })
 
-
 export class Rooms implements OnInit {
   private shiemiBaseURL: string = "http://localhost:5017/api";
-  private getAllRoomsURL: string = this.shiemiBaseURL + "/Room/all";
-  private room: Room|any = null;
+  private getAllRoomsURL: string = this.shiemiBaseURL + "/Room/1";
+  private room: Room | any = null;
 
   constructor(private httpClient: HttpClient) { }
 
   ngOnInit(): void {
-    this.httpClient.get<Room>(this.getAllRoomsURL).subscribe(data => {
-      this.room = data;
-    })
-
-    console.log(this.room);
+    this.room = this.httpClient.get<Room>(this.getAllRoomsURL)
   }
 }
 

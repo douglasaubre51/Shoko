@@ -1,30 +1,36 @@
-<h3><font style='color:rebeccapurple'>Rebeccapurple</font> for Developers</h3>
-<h3><font style='color:lightgreen'>Green</font> for Normal Users</h3>
+<h3>
+    <font style='color:rebeccapurple'>Rebeccapurple</font> for Developers
+</h3>
+<h3>
+    <font style='color:lightgreen'>Green</font> for Normal Users
+</h3>
 
 <div class='card-contain'>
-@for(user of userList;track user.id){
+    @if(userList | async; as users){
+    @for(user of users;track user.id){
     @if(user.isDeveloper == true){
-        <div class='card' style='background-color:rebeccapurple'>
-            <img class='card-img' src='{{ user.profilePhotoURL }}' />
+    <div class='card' style='background-color:rebeccapurple'>
+        <img class='card-img' src='{{ user.profilePhotoURL }}' />
 
-            <div class='card-details-contain'>
+        <div class='card-details-contain'>
             <span class='card-title'>{{ user.firstName }} {{ user.lastName }}</span>
             <span class='card-subtitle'>id: {{ user.id }} </span>
-            </div>
-            </div>
+        </div>
+    </div>
     }
 
     @else{
-        <div class='card' style='background-color:lightgreen'>
-            <img class='card-img' src='{{ user.profilePhotoURL }}' />
+    <div class='card' style='background-color:lightgreen'>
+        <img class='card-img' src='{{ user.profilePhotoURL }}' />
 
-            <div class='card-details-contain'>
+        <div class='card-details-contain'>
             <span class='card-title'>{{ user.firstName }} {{ user.lastName }}</span>
             <span class='card-subtitle'>id: {{ user.id }} </span>
-            </div>
-            </div>
+        </div>
+    </div>
     }
-} @empty{
+    } @empty{
     <span>Oops empty!</span>
-}
+    }
+    }
 </div>
