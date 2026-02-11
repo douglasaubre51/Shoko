@@ -1,4 +1,4 @@
-import { Component,OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -8,20 +8,20 @@ import { HttpClient } from '@angular/common/http';
     styleUrl: './user-table.css',
 })
 
-
 export class UserTable implements OnInit {
-    private shiemiBaseURL: string = "http://localhost:5017/api";
+    private shiemiBaseURL: string = "https://shiemiapi.onrender.com/api";
     private shiemiGetAllUsersURL: string = this.shiemiBaseURL + "/User/all";
-    userList: any = null;
+    userList: any = [];
 
     // di
-    constructor(private httpClient: HttpClient) {}
+    constructor(private httpClient: HttpClient) { }
 
     ngOnInit(): void {
-        console.log(`fetching data from SHIEMI...`);
+        console.log(`init data from SHIEMI...`);
 
-        this.httpClient.get(this.shiemiGetAllUsersURL).subscribe(data =>{
+        this.httpClient.get(this.shiemiGetAllUsersURL).subscribe(data => {
             this.userList = data;
+            console.log(data);
         });
     }
 }

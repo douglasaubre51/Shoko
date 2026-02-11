@@ -3,12 +3,11 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { RouterOutlet } from '@angular/router';
 import { Navbar } from './navbar/navbar';
-import { UserTable } from './user-table/user-table';
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HttpClientModule, Navbar, UserTable],
+  imports: [RouterOutlet, HttpClientModule, Navbar],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

@@ -1,10 +1,10 @@
-<h3><font style='color:lavender'>Lavender</font> for Developers</h3>
+<h3><font style='color:rebeccapurple'>Rebeccapurple</font> for Developers</h3>
 <h3><font style='color:lightgreen'>Green</font> for Normal Users</h3>
 
 <div class='card-contain'>
 @for(user of userList;track user.id){
     @if(user.isDeveloper == true){
-        <div class='card' style='background-color:lavender'>
+        <div class='card' style='background-color:rebeccapurple'>
             <img class='card-img' src='{{ user.profilePhotoURL }}' />
 
             <div class='card-details-contain'>
