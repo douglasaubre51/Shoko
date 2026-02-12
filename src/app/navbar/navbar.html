@@ -1,4 +1,4 @@
 <ul>
-    <li><a routerLink="">Users</a></li>
-    <li><a routerLink="/rooms">Rooms</a></li>
+    <li><a routerLink="" [class]="location.path() === '' ? 'active-tag' : 'inactive-tag'">Users</a></li>
+    <li><a routerLink="/rooms" [class]="location.path() === '/rooms' ? 'active-tag' : 'inactive-tag'">Rooms</a></li>
 </ul>

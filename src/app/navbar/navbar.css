@@ -9,11 +9,19 @@ ul {
     font-size: 1.5rem;
 }
 
-a {
+.active-tag{
     text-decoration: none;
-    color: black;
+    border-bottom:1px solid purple;
+    color: purple;
+}
+
+.inactive-tag{
+    text-decoration: none;
+    color: grey;
 }
 
 a:hover {
-    color: blueviolet;
+    color: purple;
 }
+
+

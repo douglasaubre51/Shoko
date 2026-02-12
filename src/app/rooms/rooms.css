@@ -1,6 +1,7 @@
 h3 {
     text-align: end;
     display: inline;
+    color:white;
 }
 
 .bullet {
@@ -55,4 +56,20 @@ h3 {
     flex-direction: row;
     align-items: center;
     gap: 4px;
+}
+
+@media screen and (max-width: 1000px){
+    .card-contain{
+        grid-template-columns:1fr;
+        max-width:100%;
+    }
+    .user-card{
+        padding:4px;
+        width:100%;
+    }
+    .card-details{
+        max-width:100%;
+        display:flex;
+        flex-direction:column;
+    }
 }

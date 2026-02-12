@@ -1,6 +1,7 @@
 h3 {
     text-align: end;
     display: inline;
+    color:white;
 }
 
 .card-contain {
@@ -47,4 +48,15 @@ h3 {
 
 .card-title {
     font-size: 24px;
+}
+
+@media screen and (max-width:1000px){
+    .card-contain{
+        grid-template-columns:1fr;
+        max-width:100%;
+    }
+
+    .card{
+       max-width:100%;
+    }
 }

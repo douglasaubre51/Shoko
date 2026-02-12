@@ -4,7 +4,7 @@
 
 .hero-tag {
     font-size: 4rem;
-    color: lavender;
+    color: White;
 }
 
 .main-contain {
@@ -12,5 +12,5 @@
 
     border-radius: 16px;
     padding: 16px;
-    background-color: lavender;
+    background-color: #333333;
 }
