@@ -12,7 +12,7 @@ import { Observable } from 'rxjs';
 
 
 export class UserTable implements OnInit {
-    private shiemiBaseURL: string = "https://shiemiapi.onrender.com/api";
+    private shiemiBaseURL: string = "https://localhost:7268/api";
     private shiemiGetAllUsersURL: string = this.shiemiBaseURL + "/User/all";
     userList!: Observable<User[]>;
 
