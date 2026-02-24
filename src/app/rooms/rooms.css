@@ -47,6 +47,12 @@ h3 {
 
 .card-display {
     font-size: 3rem;
+    color:#333333;
+}
+
+.card-content-details{
+    display: flex;
+    flex-direction:column;
 }
 
 .user-card {
