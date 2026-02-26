@@ -1,1 +1,23 @@
-<p>channels works!</p>
+<div class="card-contain">
+    @if(ChannelList | async ; as channels){
+    @for(channel of channels;track channel.id){
+    <a class="card-link" routerLink="/channels/{{channel.id}}/channel-users">
+        <div class="card">
+            <div class="card-details">
+                <div class="user-card" style="background-color: lightgreen;">
+                    <img class="card-img" [src]="channel.userProfile" />
+
+                    <div class="card-content-details">
+                        <span class="card-display">{{channel.title}}</span>
+
+                        <span class="card-title">{{channel.username}}</span>
+
+                        <span class="card-title">Id: {{channel.userId}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+    }
+    }
+</div>
