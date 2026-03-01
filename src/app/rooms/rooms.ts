@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
 })
 
 export class Rooms implements OnInit {
-  private shiemiBaseURL: string = "https://localhost:7268/api";
+  private shiemiBaseURL: string = "https://shiemiapi.onrender.com/api";
   private getAllRoomsURL: string = this.shiemiBaseURL + "/Room/all/with-user";
   roomList!: Observable<Room[]>;
 
