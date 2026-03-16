@@ -12,14 +12,14 @@ import { Observable } from 'rxjs';
 })
 
 export class Channels {
-  private ShiemiGetChannels = "https://localhost:7268/api/Channel/all";
+  private ShiemiGetChannels = "https://shiemiapi.onrender.com/api/Channel/all";
 
   ChannelList!: Observable<ChannelDto[]>;
 
   constructor(private httpClient: HttpClient) { }
 
   ngOnInit() {
-    this.ChannelList = this.httpClient.get<ChannelDto[]>(this.ShiemiGetChannels);
+    this.ChannelList = this.httpClient.get<ChannelDto[]>(this.ShiemiGetChannels)
   }
 }
 

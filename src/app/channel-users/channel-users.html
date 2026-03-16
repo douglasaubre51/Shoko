@@ -1,1 +1,19 @@
-<p>channel-users works!</p>
+<span class="channel-card-title">Channel id: {{channelId}}</span>
+
+<div style="margin-top:16px" class='card-contain'>
+    @if(ChannelUserList | async; as channelUsers){
+    @for(user of channelUsers;track user.userId){
+    <div class='card' style='background-color:lightgreen'>
+        <img class='card-img' src='{{ user.profile }}' />
+
+        <div class='card-details-contain'>
+            <span class='card-title'>{{ user.username }}</span>
+            <span class='card-subtitle'>User id: {{ user.userId }} </span>
+        </div>
+    </div>
+    }
+    @empty{
+    <span style="color:red">Oops empty!</span>
+    }
+    }
+</div>

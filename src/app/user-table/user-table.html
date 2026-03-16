@@ -15,6 +15,9 @@
             <span class='card-title'>{{ user.firstName }} {{ user.lastName }}</span>
             <span class='card-subtitle'>{{ user.email }} </span>
             <span class='card-subtitle'>id: {{ user.id }} </span>
+
+            <button (click)="onBanUserClicked(user.id)" class="card-danger-btn">Ban user</button>
+            <button (click)="onRemoveUserBanClicked(user.id)" class="card-sec-btn">Remove ban</button>
         </div>
     </div>
     }
@@ -27,6 +30,9 @@
             <span class='card-title'>{{ user.firstName }} {{ user.lastName }}</span>
             <span class='card-subtitle'>{{ user.email }} </span>
             <span class='card-subtitle'>id: {{ user.id }} </span>
+
+            <button (click)="onBanUserClicked(user.id)" class="card-danger-btn">Ban user</button>
+            <button (click)="onRemoveUserBanClicked(user.id)" class="card-sec-btn">Remove ban</button>
         </div>
     </div>
     }
